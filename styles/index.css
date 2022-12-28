@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+.container {
+    width: 550px;
+    background-color: #FFFFFF;
+    margin: auto;
+
+
+}
+
+.container nav {
+padding: 20px 13.9px;
+    
+}
+
+.container ol {
+    display: flex;
+    list-style: none;
+    padding: 0; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+
+}
+
+.container li {
+    cursor: pointer;
+}
+
+.container ol img {
+    width: 34px;
+}
+
+
+#logo {
+    width: 84px;
+}
