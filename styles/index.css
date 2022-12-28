@@ -1,40 +1,97 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-color: lightgray;
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
 }
 .container {
-    width: 550px;
-    background-color: #FFFFFF;
-    margin: auto;
-
-
+  width: 550px;
+  background-color: #ffffff;
+  margin: auto;
 }
 
+/* ----------NAV---------- */
 .container nav {
-padding: 20px 13.9px;
-    
+  padding: 20px 13.9px;
 }
 
 .container ol {
-    display: flex;
-    list-style: none;
-    padding: 0; 
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
 }
 
 .container li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .container ol img {
-    width: 34px;
+  width: 34px;
 }
-
 
 #logo {
-    width: 84px;
+  width: 84px;
 }
+/* ----------MAIN-IMG---------- */
+
+.main-img {
+  position: relative;
+}
+
+.main-img img {
+  width: 534px;
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+}
+
+.dog-info {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  position: absolute;
+  top: 630px;
+  left: 25px;
+}
+
+.dog-info :first-child {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 36px;
+  margin-bottom: 7.2px;
+  color: #f8f8f8;
+}
+
+.dog-info :last-child {
+  margin-top: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  color: #b7b7b7;
+}
+
+/* ----------BUTTONS---------- */
+
+.buttons {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 24px;
+}
+
+.buttons button {
+  margin-top: 24px;
+  margin-bottom: 24.13px;
+  width: 91.87px;
+  height: 91.87px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px #E9E9EA;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.buttons button:hover {
+  background: #f3f0f0;
+}
+
