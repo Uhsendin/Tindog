@@ -1,40 +1,50 @@
 import dogs from "./data.js";
 import Dogs from "./Dog.js";
 
-const disliked = document.getElementById("dislike");
-const liked = document.getElementById("liked");
-const imgCreate = document.createElement("img")
+const imgCreate = document.createElement("img");
+let currentDogIndex = 0;
+let currentDog = new Dogs(dogs[currentDogIndex]);
 
+function getNewDog() {
+  if (currentDogIndex < 2) {
+    currentDogIndex += 1;
+    currentDog = new Dogs(dogs[currentDogIndex]);
+    render();
+  } else {
+document.querySelector(".main-img").innerHTML = `<p id="end-of-array">
+Sorry, no more single dogs near your area!
+</p>`
+  }
+}
 
-document.querySelector(".buttons").addEventListener('click', (event) => {
-  const isButton = event.target.nodeName === 'BUTTON';
+function yes() {
+  currentDog.setMatchStatus(true);
+  getNewDog();
+}
+
+function no() {
+  currentDog.setMatchStatus(false);
+  getNewDog();
+}
+
+function render() {
+  document.querySelector(".main-img").innerHTML = currentDog.getDogInfoHtml();
+}
+
+render();
+
+document.querySelector(".buttons").addEventListener("click", (event) => {
+  const isButton = event.target.nodeName === "BUTTON";
   if (!isButton) {
     return;
   }
-if (event.target.id === "dislike") {
-  document.getElementById("dislike").style.backgroundColor =  "#FFE7EF"
-  imgCreate.src = "images/badge-nope.png"
-  document.querySelector(".nope-like-img").appendChild(imgCreate)
-  
-} else if (event.target.id === "liked") {
-  document.getElementById("liked").style.backgroundColor = "#DBFFF4"
-  imgCreate.src = "images/badge-like.png"
-  document.querySelector(".nope-like-img").appendChild(imgCreate)
-}
-  
-})
-
-
-
-
-
-
-function render() {
-  document.querySelector(".main-img").innerHTML = dogInfo.getDogInfoHtml()
-}
-
-let dogInfo = new Dogs(dogs.Teddy)
-
-
-render()
-
+  if (event.target.id === "dislike") {
+    imgCreate.src = "images/badge-nope.png";
+    document.querySelector(".nope-like-img").appendChild(imgCreate);
+    setTimeout(no, 800);
+  } else if (event.target.id === "liked") {
+    imgCreate.src = "images/badge-like.png";
+    document.querySelector(".nope-like-img").appendChild(imgCreate);
+    setTimeout(yes, 800);
+  }
+});

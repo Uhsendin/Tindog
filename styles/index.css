@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -67,7 +68,8 @@ transform: rotate(-30deg);
   font-family: "Poppins", sans-serif;
   color: white;
   position: absolute;
-  top: 630px;
+  width: 520px;
+  top: 600px;
   left: 25px;
 }
 
@@ -87,6 +89,17 @@ transform: rotate(-30deg);
   color: #b7b7b7;
 }
 
+#end-of-array {
+  margin: 0;
+  text-align: center;
+  padding: 330.010px 0;
+  width: 550px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+
 /* ----------BUTTONS---------- */
 
 .buttons {
@@ -100,6 +113,12 @@ transform: rotate(-30deg);
   background-image: url(/images/icon-cross.png);
   background-repeat: no-repeat;
   background-position: center;
+}
+#dislike:hover {
+  background-color: #FFE7EF;
+}
+#liked:hover {
+  background-color: #DBFFF4;
 }
 
 #liked {
