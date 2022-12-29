@@ -47,6 +47,22 @@ body {
   border-radius: 15px;
 }
 
+.nope-like-img {
+  left: 25px;
+  top: 53.96px;
+width: 233.91px;
+  height: 116.26px;
+position: absolute;
+transform: rotate(-30deg);
+  
+}
+
+.nope-like-img img {
+  width: 233.91px;
+  height: 116.26px;
+  
+}
+
 .dog-info {
   font-family: "Poppins", sans-serif;
   color: white;
@@ -80,13 +96,25 @@ body {
   gap: 24px;
 }
 
+#dislike {
+  background-image: url(/images/icon-cross.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#liked {
+  background-image: url(/images/icon-heart.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .buttons button {
   margin-top: 24px;
   margin-bottom: 24.13px;
   width: 91.87px;
   height: 91.87px;
-  background: #FFFFFF;
-  box-shadow: 0px 10px 20px #E9E9EA;
+  background: #ffffff;
+  box-shadow: 0px 10px 20px #e9e9ea;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -94,4 +122,3 @@ body {
 .buttons button:hover {
   background: #f3f0f0;
 }
-
